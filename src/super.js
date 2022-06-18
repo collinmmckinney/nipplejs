@@ -3,18 +3,13 @@
 ///////////////////////
 import * as u from './utils';
 
-console.log('here1');
-
 var canUseWindow = typeof window !== 'undefined';
-
-console.log(canUseWindow);
+const window = !canUseWindow ? {} : window;
 
 // Constants
 var isTouch = canUseWindow && !!('ontouchstart' in window);
 var isPointer = canUseWindow && window.PointerEvent ? true : false;
 var isMSPointer = canUseWindow && window.MSPointerEvent ? true : false;
-
-console.log('here2');
 
 var events = {
     touch: {
@@ -152,8 +147,5 @@ Super.prototype.unbindEvt = function (el, type) {
 
     return this;
 };
-
-
-console.log('here3');
 
 export default Super;
