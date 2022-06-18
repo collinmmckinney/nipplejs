@@ -3,7 +3,7 @@
 ///////////////////////
 import * as u from './utils';
 
-var canUseWindow = typeof window !== "undefined";
+var canUseWindow = typeof window !== 'undefined';
 
 // Constants
 var isTouch = canUseWindow && !!('ontouchstart' in window);
