@@ -6,9 +6,9 @@ import * as u from './utils';
 const window = {};
 
 // Constants
-var isTouch = canUseWindow && !!('ontouchstart' in window);
-var isPointer = canUseWindow && window.PointerEvent ? true : false;
-var isMSPointer = canUseWindow && window.MSPointerEvent ? true : false;
+var isTouch = !!('ontouchstart' in window);
+var isPointer = window.PointerEvent ? true : false;
+var isMSPointer = window.MSPointerEvent ? true : false;
 
 var events = {
     touch: {
